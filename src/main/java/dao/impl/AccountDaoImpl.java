@@ -4,16 +4,21 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 import dao.AccountDao;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Repository;
 import pojo.Account;
 
 import java.beans.PropertyVetoException;
 import java.sql.Connection;
 import java.util.List;
 
+@Repository
 public class AccountDaoImpl implements AccountDao {
 //    private static Connection con = JDBCUtilsConfig.getConnection();
+    @Autowired
     QueryRunner queryRunner;
+    @Autowired
     ComboPooledDataSource c3p0;
 //    public AccountDaoImpl(){
 //        try{

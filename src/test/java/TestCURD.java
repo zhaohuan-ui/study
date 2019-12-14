@@ -24,7 +24,7 @@ public class TestCURD {
 //        System.out.println(bean);
 //        System.out.println(bean1);
 //        System.out.println(queryRunner);
-        bean.findAll();
+//        bean.findAll();
         System.out.println("ioc:" + bean1);
     }
 }
