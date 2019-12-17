@@ -1,9 +1,11 @@
-package dao;
+package cn.dao;
 
-import pojo.Account;
+import cn.pojo.Account;
 
 import java.util.List;
-
+//@Component
 public interface AccountDao {
     public List<Account> findAll();
+
+    void update(Integer id);
 }

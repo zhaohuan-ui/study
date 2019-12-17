@@ -1,4 +1,4 @@
-package pojo;
+package cn.pojo;
 
 public class Account {
     private Integer id;

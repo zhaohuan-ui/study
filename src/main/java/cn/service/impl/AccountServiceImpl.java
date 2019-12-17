@@ -1,12 +1,16 @@
-package service.impl;
+package cn.service.impl;
 
-import dao.AccountDao;
-import pojo.Account;
-import service.AccountService;
+import cn.dao.AccountDao;
+import cn.service.AccountService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import cn.pojo.Account;
 
 import java.util.List;
 
+@Service
 public class AccountServiceImpl implements AccountService {
+    @Autowired
     AccountDao accountDao;
 
     @Override
