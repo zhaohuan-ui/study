@@ -1,14 +1,19 @@
 import cn.dao.impl.AccountDaoImpl;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestCURD {
     @Autowired
-    AccountDaoImpl accountDao;
+    AccountDaoImpl accountDaoImpl;
     @Test
     public void test(){
+//        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+//        AccountDaoImpl bean = applicationContext.getBean(AccountDaoImpl.class);
+//        bean.update(1);
 //        System.out.println(accountDao);
-//        accountDao.update(1);
+        accountDaoImpl.update(1);
 //        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
 //        AccountDao bean = applicationContext.getBean(AccountDao.class);
 //        QueryRunner bean1 = applicationContext.getBean(QueryRunner.class);

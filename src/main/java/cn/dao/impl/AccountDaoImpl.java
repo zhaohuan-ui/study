@@ -13,10 +13,10 @@ import java.util.List;
 @Repository
 public class AccountDaoImpl implements AccountDao {
 //    private static Connection con = JDBCUtilsConfig.getConnection();
-    @Autowired
-    QueryRunner queryRunner;
-    @Autowired
-    ComboPooledDataSource c3p0;
+//    @Autowired
+//    QueryRunner queryRunner;
+//    @Autowired
+//    ComboPooledDataSource c3p0;
 //    public AccountDaoImpl(){
 //        try{
 //            c3p0 = new ComboPooledDataSource();
@@ -34,19 +34,20 @@ public class AccountDaoImpl implements AccountDao {
     @Override
     public List<Account> findAll() {
 //        System.out.println(c3p0.getJdbcUrl());
-        String sql = "Select * from account";
-        queryRunner = new QueryRunner(c3p0);
-        System.out.println("method:" + queryRunner);
-        List<Account> query = null;
-        try{
-            query = queryRunner.query(sql, new BeanListHandler<Account>(Account.class));
-            for(Account account : query){
-                System.out.println(account.toString());
-            }
-        }catch(Exception e){
-            System.out.println(e);
-        }
-        return query;
+//        String sql = "Select * from account";
+//        queryRunner = new QueryRunner(c3p0);
+//        System.out.println("method:" + queryRunner);
+//        List<Account> query = null;
+//        try{
+//            query = queryRunner.query(sql, new BeanListHandler<Account>(Account.class));
+//            for(Account account : query){
+//                System.out.println(account.toString());
+//            }
+//        }catch(Exception e){
+//            System.out.println(e);
+//        }
+//        return query;
+        return null;
     }
 
     @Override
@@ -54,6 +55,8 @@ public class AccountDaoImpl implements AccountDao {
         System.out.println("成功");
     }
 
-    public void setQueryRunner(QueryRunner queryRunner){this.queryRunner=queryRunner;}
-    public void setC3p0(ComboPooledDataSource c3p0){this.c3p0=c3p0;}
+
+
+//    public void setQueryRunner(QueryRunner queryRunner){this.queryRunner=queryRunner;}
+//    public void setC3p0(ComboPooledDataSource c3p0){this.c3p0=c3p0;}
 }
